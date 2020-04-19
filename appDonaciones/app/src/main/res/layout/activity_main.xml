@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tviMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Bienvenido"
+        android:layout_alignParentTop="true">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tviInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/tviMonto"
+        android:text="1. Seleccione con que tipo de tarjeta va a pagar">
+    </TextView>
+
+
+    <RadioGroup
+        android:id="@+id/rgrGrupo"
+        android:layout_below="@+id/tviInfo"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@+id/tviMonto"
+        android:layout_alignRight="@+id/tviMonto"
+        android:layout_height="wrap_content" >
+        <RadioButton
+            android:id="@+id/rbuVisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visa">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbuMasterCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MasterCard">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tviInfo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/rgrGrupo"
+        android:text="2. Escoja su pais">
+    </TextView>
+    <Spinner
+        android:id="@+id/spiPais"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/tviMonto"
+        android:layout_alignRight="@+id/tviMonto"
+        android:layout_below="@+id/tviInfo2">
+
+    </Spinner>
+    <TextView
+        android:id="@+id/tviInfo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/spiPais"
+        android:text="3. Ingrese monto a donar">
+    </TextView>
+
+    <EditText
+        android:id="@+id/eteMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tviInfo3"
+        android:inputType="number"
+        android:layout_alignLeft="@+id/tviMonto"
+        android:layout_alignRight="@+id/tviMonto">
+    </EditText>
+    <Button
+        android:id="@+id/butCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eteMonto"
+        android:layout_centerHorizontal="true"
+        android:text="Calcular">
+
+    </Button>
+    <TextView
+        android:id="@+id/tviResult"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/butCalcular"
+        android:text="Resultado"
+        android:layout_alignLeft="@+id/tviMonto"
+        android:layout_alignRight="@+id/tviMonto"
+        android:gravity="center_horizontal">
+    </TextView>
+
+</RelativeLayout>
